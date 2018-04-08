@@ -53,7 +53,9 @@ BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_RAMDISK_OFFSET     := 0x01000000
-TARGET_PREBUILT_KERNEL := device/xiaomi/whyred/prebuilt/kernel
+TARGET_PREBUILT_KERNEL := device/xiaomi/whyred/kernel
+BOARD_CUSTOM_BOOTIMG_MK := device/xiaomi/whyred/mkbootimg.mk
+BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 
 # Platform
 TARGET_BOARD_PLATFORM := sdm660

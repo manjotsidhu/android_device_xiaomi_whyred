@@ -1,3 +1,5 @@
+include device/xiaomi/whyred/rootdir/Android.mk
+
 #Use a more decent APN config
 PRODUCT_COPY_FILES += \
 	device/xiaomi/whyred/etc/apns-full-conf.xml:system/etc/apns-conf.xml
@@ -27,3 +29,22 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
 	treble-environ-rc	
+	
+# Ramdisk
+TARGET_PROVIDES_INIT_RC := true
+
+PRODUCT_PACKAGES += \
+    init.environ.rc \
+    init.miui.early_boot.sh \
+    init.miui.google_revenue_share.rc \
+    init.miui.post_boot.sh \
+    init.miui.rc \
+    init.rc \
+    init.recovery.hardware.rc \
+    init.recovery.qcom.rc \
+    init.usb.configfs.rc \
+    init.usb.rc \
+    init.zygote32.rc \
+    init.zygote64_32.rc \
+    ueventd.rc \
+	
